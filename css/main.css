@@ -1,8 +1,14 @@
 /* Reset */
+:root {
+    --main-color: rgb(3, 102, 72);
+    --second-color: rgb(34, 33, 33);
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: white;
 }
 
 body {
@@ -25,27 +31,27 @@ a {
 .page {
     display: flex;
     min-height: 100vh;
-    background-color: rgba(119, 116, 116, 0.3);
+    background-color: rgb(19, 18, 18);
 }
 
 /* ================= Sidebar ================= */
 .sidebar {
-    background-color: white;
+    background-color: rgb(34, 33, 33);
     padding: 20px;
     position: relative;
     width: 250px;
-    box-shadow: 0 0 10px rgba(119, 116, 116, 0.3);
 }
 
 .sidebar h2 {
     position: relative;
     text-align: center;
     margin-bottom: 50px;
+    color: white;
 }
 
 .sidebar h2::before {
     content: "";
-    background-color: black;
+    background-color: white;
     width: 80px;
     height: 2px;
     position: absolute;
@@ -56,10 +62,10 @@ a {
 
 .sidebar h2::after {
     content: "";
-    background-color: black;
+    background-color: white;
     width: 12px;
     height: 12px;
-    border: 4px solid white;
+    border: 4px solid rgb(34, 33, 33);
     border-radius: 50%;
     position: absolute;
     bottom: -29px;
@@ -69,7 +75,7 @@ a {
 
 .sidebar ul li a.active,
 .sidebar ul li a:hover {
-    background-color: gray;
+    background-color: var(--main-color);
 }
 
 .sidebar ul li a {
@@ -97,6 +103,7 @@ a {
     .sidebar h2 {
         font-size: 13px;
         margin-bottom: 5px;
+        margin-top: 15px;
     }
 
     .sidebar h2::before,
@@ -119,10 +126,10 @@ a {
 
 .content .head {
     padding: 15px;
-    background-color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 20px;
 }
 
 .content .head .search {
@@ -144,6 +151,7 @@ a {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 10px;
+    background-color: unset;
     margin-left: 5px;
     padding-left: 30px;
     width: 160px;
@@ -152,6 +160,10 @@ a {
 
 .content .head input:focus {
     width: 200px;
+}
+
+.content .head input::placeholder {
+    color: white;
 }
 
 .content .head input:focus::placeholder {
@@ -166,5 +178,110 @@ a {
 .content .head img {
     max-width: 40px;
     border-radius: 50%;
+    border: 3px solid white;
     margin-left: 10px;
+}
+
+.page .content h1 {
+    margin-left: 15px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.page .content h1::before,
+.page .content h1::after {
+    content: '';
+    position: absolute;
+    height: 3px;
+    left: 0%;
+    bottom: -10px;
+}
+
+.page .content h1::before {
+    width: 140px;
+    background-color: white;
+}
+
+.page .content h1::after {
+    width: 100px;
+    background-color: var(--main-color);
+}
+
+.w-section {
+    border-radius: 25px;
+    width: 97%;
+    margin: 0px auto;
+}
+
+.w-section .container {
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.w-section .w-head {
+    background-color: var(--second-color);
+    padding: 30px 15px;
+    position: relative;
+}
+
+.w-section img {
+    position: absolute;
+    max-width: 70px;
+    border-radius: 50%;
+    border: 5px solid white;
+    bottom: -35px;
+}
+
+.w-section .w-head h2 {
+    margin: 8px 0px;
+    font-size: 32px;
+}
+
+.w-section .w-head p {
+    margin: 10px 0px;
+}
+
+.w-section .w-bot {
+    padding: 40px 0px;
+    background-color: #aaa;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.w-section .w-bot span {
+    display: block;
+    padding: 30px 15px;
+    border-top: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+    text-align: center;
+    width: 310px;
+}
+
+.w-section .w-bot h3 {
+    color: black;
+    letter-spacing: 2px;
+}
+
+.w-section .w-bot p {
+    color: #eee;
+    font-size: 16px;
+}
+
+@media (max-width: 767px) {
+    .w-section .w-bot {
+        flex-direction: column;
+    }
+
+    .w-section .w-bot span:nth-child(1) {
+        border-bottom: none;
+    }
+
+    .w-section .w-bot span:nth-child(2) {
+        border: none;
+    }
+
+    .w-section .w-bot span:nth-child(3) {
+        border-top: none;
+    }
 }
