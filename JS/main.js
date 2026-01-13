@@ -1,6 +1,6 @@
 
 let repoesNum = document.getElementById('length');
-
+let projects = document.getElementById('projN')
 getRep();
 //get repos function
 function getRep() {
@@ -9,7 +9,7 @@ function getRep() {
         .then((res) => res.json())
         .then((repos) => {
             repoesNum.innerHTML = `${repos.length}`
-            console.log(repos)
+            projects.innerHTML = `${repos.length}`
         }
         )
 }
