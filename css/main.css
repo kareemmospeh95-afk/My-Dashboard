@@ -1,14 +1,19 @@
 /* Reset */
 :root {
-    --main-color: rgb(3, 102, 72);
+    --main-color: #0075ff;
     --second-color: rgb(34, 33, 33);
+    --primary-color-alt: #0366da;
+    --green-color: #009688;
+    --danger-color: darkred;
+    --border-color: #ebebeb;
+    --half-white: #bbd3f856;
+    --second2-color: #009688;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: white;
 }
 
 body {
@@ -31,28 +36,28 @@ a {
 .page {
     display: flex;
     min-height: 100vh;
-    background-color: rgb(19, 18, 18);
+    background-color: var(--half-white);
 }
 
 /* ================= Sidebar ================= */
 .sidebar {
-    background-color: rgb(34, 33, 33);
+    background-color: white;
     padding: 20px;
     position: relative;
     width: 250px;
-    margin-right: 30px;
+    margin-right: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
 .sidebar h2 {
     position: relative;
     text-align: center;
     margin-bottom: 50px;
-    color: white;
 }
 
 .sidebar h2::before {
     content: "";
-    background-color: white;
+    background-color: black;
     width: 80px;
     height: 2px;
     position: absolute;
@@ -63,10 +68,10 @@ a {
 
 .sidebar h2::after {
     content: "";
-    background-color: white;
+    background-color: black;
     width: 12px;
     height: 12px;
-    border: 4px solid rgb(34, 33, 33);
+    border: 4px solid white;
     border-radius: 50%;
     position: absolute;
     bottom: -29px;
@@ -133,6 +138,7 @@ a {
     align-items: center;
     margin-bottom: 20px;
     width: 100%;
+    background-color: white;
 }
 
 .content .head .search {
@@ -164,9 +170,6 @@ a {
     width: 200px;
 }
 
-.content .head input::placeholder {
-    color: white;
-}
 
 .content .head input:focus::placeholder {
     opacity: 0;
@@ -219,7 +222,7 @@ a {
 }
 
 .w-section .w-head {
-    background-color: var(--second-color);
+    background-color: #ebeaea;
     padding: 20px 15px;
     height: 35%;
     border-top-left-radius: 15px;
@@ -228,6 +231,7 @@ a {
 
 .w-section .w-head p {
     margin-top: 5px;
+    color: #686666;
 }
 
 .w-section img {
@@ -239,7 +243,7 @@ a {
 }
 
 .w-section .w-bot {
-    background-color: #aaa;
+    background-color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -251,8 +255,8 @@ a {
 }
 
 .w-section .w-bot .data {
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
     width: 100%;
     height: 60%;
     display: flex;
@@ -260,6 +264,7 @@ a {
     align-items: center;
     margin-top: 20px;
 }
+
 
 .w-section .w-bot span {
     display: block;
@@ -272,23 +277,24 @@ a {
 }
 
 .w-section .w-bot p {
-    color: #eee;
-    font-size: 16px;
+    font-size: 14px;
     margin-top: 10px;
+    color: #686666;
 }
 
 .w-section .btn {
     width: 100%;
-    padding:15px ;
+    padding: 15px;
     display: flex;
     justify-content: flex-end;
 }
 
 .w-section .container .btn .pro {
     display: block;
-    background-color: blue;
+    background-color: var(--main-color);
     width: fit-content;
     padding: 10px;
     border-radius: 5px;
     cursor: pointer;
+    color: white;
 }
