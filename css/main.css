@@ -14,6 +14,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
+
 }
 
 body {
@@ -37,6 +39,24 @@ a {
     display: flex;
     min-height: 100vh;
     background-color: var(--half-white);
+    position: relative;
+}
+
+.scroll {
+    background-color: var(--main-color);
+    color: white;
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    right: 5%;
+    bottom: 5%;
+    z-index: 999;
+    font-size: 20px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
 
 /* ================= Sidebar ================= */
@@ -47,6 +67,16 @@ a {
     width: 250px;
     margin-right: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar::before {
+    position: absolute;
+    content: '';
+    left: 0%;
+    top: 0%;
+    width: 4px;
+    height: 100%;
+    background-color: var(--main-color);
 }
 
 .sidebar h2 {
@@ -397,20 +427,20 @@ a {
         padding: 0;
     }
 
-    .targets .price {
-        width: 85%;
+    .targets .mony .price {
+        width: 70%;
     }
 
     .targets .mony span,
     .targets .mony .span-2,
     .targets .mony .span-3 {
-        width: 18%;
+        width: 27%;
     }
 }
 
 .targets .price .progress-1 {
     width: 100%;
-    height: 5px;
+    height: 3px;
     background-color: rgba(0, 174, 255, 0.342);
 }
 
@@ -424,7 +454,7 @@ a {
 
 .targets .price .progress-2 {
     width: 100%;
-    height: 5px;
+    height: 3px;
     background-color: rgba(255, 166, 0, 0.37);
 }
 
@@ -438,7 +468,7 @@ a {
 
 .targets .price .progress-3 {
     width: 100%;
-    height: 5px;
+    height: 3px;
     background-color: rgba(0, 128, 0, 0.404);
 }
 
@@ -457,7 +487,6 @@ a {
     top: -35px;
     right: -5%;
     width: 40px;
-    height: 15px;
     padding: 5px;
     border-radius: 5px;
     text-align: center;
@@ -476,5 +505,72 @@ a {
 .price .progress-3 span::before {
     content: attr(data-num);
     background-color: rgba(0, 128, 0, 0.404);
+}
 
+.tickets {
+    padding: 15px;
+    background-color: white;
+    position: relative;
+}
+
+.tickets::before {
+    position: absolute;
+    content: '';
+    left: 0%;
+    top: 0%;
+    width: 4px;
+    height: 100%;
+    background-color: var(--main-color);
+}
+
+.tickets>h2 {
+    margin-bottom: 5px;
+}
+
+.tickets>p {
+    color: gray;
+    font-size: 14px;
+}
+
+.tickets .container {
+    display: grid;
+    grid-template-columns: 350px 350px;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+@media (max-width: 767px) {
+    .tickets .container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.tickets .container .stats {
+    text-align: center;
+    padding: 8px 0px;
+    border: 1px solid #ccc;
+}
+
+.tickets .container .stats h2 {
+    padding: 8px 0px;
+}
+
+.tickets .container .stats i {
+    font-size: 32px;
+}
+
+.or {
+    color: orange;
+}
+
+.bl {
+    color: var(--main-color);
+}
+
+.gr {
+    color: green;
+}
+
+.re {
+    color: red;
 }
