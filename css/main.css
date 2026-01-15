@@ -365,6 +365,7 @@ a {
     margin-bottom: 20px;
     padding: 20px 15px;
     position: relative;
+    width: 97%;
 }
 
 
@@ -511,6 +512,7 @@ a {
     padding: 15px;
     background-color: white;
     position: relative;
+    width: 97%;
 }
 
 .tickets::before {
@@ -573,4 +575,80 @@ a {
 
 .re {
     color: red;
+}
+
+.news {
+    padding: 15px;
+    background-color: white;
+    position: relative;
+    margin-top: 20px;
+    width: 97%;
+}
+
+.news .f-sec {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0px;
+}
+
+@media (max-width: 600px) {
+    .news h2{
+        text-align: center;
+    }
+    .news .f-sec {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .news .f-sec .txt {
+        display: block;
+        text-align: center;
+        padding: 5px 0px;
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 400px) {
+    .news .txt h3 {
+        font-size: 12px;
+    }
+
+    .news .txt p {
+        font-size: 10px;
+    }
+}
+
+.news .f-sec:not(:first-child) {
+    border-top: 1px solid #ccc;
+    margin-top: 5px;
+}
+
+.news .f-sec img {
+    max-width: 110px;
+    border-radius: 10px;
+}
+
+.news .f-sec .txt {
+    display: block;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 60%;
+}
+
+.news .txt p {
+    font-size: 14px;
+    margin-top: 5px;
+    color: #686666;
+}
+
+.news .dys span {
+    display: block;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #ccc;
+    font-size: 13px;
 }
