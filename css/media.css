@@ -1,0 +1,105 @@
+@media (max-width: 767px) {
+    .sidebar {
+        width: 60px;
+        padding: 5px;
+    }
+
+    .sidebar h2 {
+        font-size: 13px;
+        margin-bottom: 5px;
+        margin-top: 15px;
+    }
+
+    .sidebar h2::before,
+    .sidebar h2::after {
+        display: none;
+    }
+
+    .sidebar a {
+        padding: 5px;
+    }
+
+    .sidebar a span {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .wrap {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: minmax(250px, 1fr);
+        margin: 0px 10px;
+    }
+}
+
+@media (max-width: 767px) {
+    .targets {
+        padding: 0;
+    }
+
+    .targets .mony .price {
+        width: 70%;
+    }
+
+    .targets .mony span,
+    .targets .mony .span-2,
+    .targets .mony .span-3 {
+        width: 27%;
+    }
+}
+
+@media (max-width: 600px) {
+    .news h2 {
+        text-align: center;
+    }
+
+    .news .f-sec {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .news .f-sec .txt {
+        display: block;
+        text-align: center;
+        padding: 5px 0px;
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    .w-section .w-head .img-we {
+        display: none;
+    }
+
+    .w-section .w-head p {
+        margin-top: 5px;
+        color: #686666;
+    }
+
+    .w-section .container .logo {
+        position: absolute;
+        max-width: 60px;
+        border-radius: 50%;
+        border: 3px solid white;
+        top: 25%;
+    }
+
+    .news .txt h3 {
+        font-size: 12px;
+    }
+
+    .news .txt p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 1180px) {
+    .news .f-sec .txt {
+        text-align: center;
+    }
+
+}
