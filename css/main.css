@@ -553,7 +553,26 @@ section {
     width: 60%;
     text-align: center;
 }
-
+section .task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px;
+  }
+  section .task p{
+    margin-top: 5px;
+  }
+  section .task i{
+    color: red;
+  }
+  section .task-d h4,
+  section .task-d p{  
+    color: #ccc;
+    text-decoration: line-through;
+  }
+  section .task-d i{
+    color: #ccc;
+  }
 .news .txt p {
     font-size: 14px;
     margin-top: 5px;
